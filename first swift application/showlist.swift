@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct showlist: View {
+    
+    @StateObject var listInstance = ListViewModel()
 
-    private var ListDetails :[ListModel] = [
-        ListModel(ids: 1, Name: "Jhon"),
-        ListModel(ids: 2, Name: "Doe"),
-        
-    ]
     var body: some View {
-        List(ListDetails , id: \.Name){listData in
-            ListRow(listModel: listData)
+        List(listInstance.listOfData){listOfData in
+            ListRow(listModel: listOfData)
             }
+        
+      
 }
+    
+
 }
 
 struct showlist_Previews: PreviewProvider {

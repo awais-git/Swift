@@ -10,14 +10,15 @@ import SwiftUI
 struct ListRow: View {
     var listModel : ListModel
     var body: some View {
-        Text(listModel.Name)
+        Text(listModel.name).font(.system(size: 40))
+        
        
     }
 }
 
 struct ListRow_Previews: PreviewProvider {
     static var previews: some View {
-      let myList = ListModel(ids: 1, Name: "Awais")
-        ListRow(listModel: myList)
+        let myList:[ListModel] = ResourceLoader().loadListData()
+        ListRow(listModel: myList[0])
     }
 }

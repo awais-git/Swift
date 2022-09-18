@@ -1,9 +1,8 @@
-//
+
 //  first_swift_applicationApp.swift
 //  first swift application
-//
 //  Created by Awais Sarwar Khan on 16/09/2022.
-//
+
 
 import SwiftUI
 

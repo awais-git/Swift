@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ListModel {
-    var ids : Int
-    var Name : String
+struct ListModel : Decodable , Identifiable {
+    var id : Int
+    var name : String
 }
